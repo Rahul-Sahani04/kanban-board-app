@@ -1,0 +1,42 @@
+.ticket {
+    width: 100%;
+    min-height: 100px;
+    max-height: 100px;
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.ticket-data {
+    display: flex;
+    width: 95%;
+    height: 100%;
+    padding: 5%;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.ticket-title{
+    height: 50%;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+.ticketId{
+    color: #686c72;
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    font-size: 12px;
+}
+
+.ticketTag{
+    color: #686c72;
+    position: absolute;
+    bottom: 5%;
+    left: 10%;
+    font-size: 12px;
+}

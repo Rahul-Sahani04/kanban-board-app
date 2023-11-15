@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import React, { useState } from "react";
+import Board from "./components/Board/Board";
+import DisplayOptions from "./components/DisplayOptions/DisplayOptions";
+import SortOptions from "./components/SortOptions/SortOptions";
+
+const App = () => {
+  const [displayOption, setDisplayOption] = useState("By Status"); // Default display option
+  const [sortOption, setSortOption] = useState("priority"); // Default sort option
+
+  const handleDisplayChange = (option) => {
+    setDisplayOption(option);
+  };
+
+  const handleSortChange = (option) => {
+    setSortOption(option);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <h1>Kanban Board</h1>
+      <DisplayOptions onDisplayChange={handleDisplayChange} />
+      {/* <SortOptions onSortChange={handleSortChange} /> */}
+      <Board displayOption={displayOption} sortOption={sortOption} />
     </div>
   );
-}
+};
 
 export default App;
+ 
