@@ -124,7 +124,7 @@ const Board = ({ displayOption, sortOption }) => {
       {tickets.length > 0 && users.length > 0 ? (
         Object.entries(groupTickets()).map(([groupName, groupTickets]) => (
           <div key={groupName} className="column">
-            <h2 className="group-title">{groupName}</h2>
+            <h2 className="group-title">{groupName} <span >{groupTickets.length}</span></h2>
             <div className="ticketsGroup">
               {groupTickets &&
                 groupTickets.map((ticket) => (

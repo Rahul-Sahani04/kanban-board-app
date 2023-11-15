@@ -1,4 +1,4 @@
-
+import "../styles/DisplayOptions.css"
 import React from 'react';
 
 const DisplayOptions = ({ onDisplayChange }) => {
@@ -9,8 +9,8 @@ const DisplayOptions = ({ onDisplayChange }) => {
   };
 
   return (
-    <div className="display-options">
-      <label htmlFor="displaySelect">Display:</label>
+    <div className="select-dropdown">
+      <label style={{marginLeft: "5px"}} htmlFor="displaySelect">Display:</label>
       <select id="displaySelect" onChange={(e) => handleDisplayChange(e.target.value)}>
         {options.map((option) => (
           <option key={option} value={option}>

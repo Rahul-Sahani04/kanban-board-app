@@ -1,4 +1,4 @@
-/* styles/Board.css */
+
 .board {
     background-color: #F4F5F8;
     display: grid;
@@ -15,9 +15,12 @@
   }
   
   .group-title {
-    text-align: center;
-    margin-bottom: 10px;
-  }
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .group-title span {
+        font-size: 12px;
+    }
   
   .ticketsGroup {
     display: grid;
@@ -25,5 +28,4 @@
     gap: 15px;
   }
   
-  /* Add more styling as needed */
   

@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Board from "./components/Board/Board";
 import DisplayOptions from "./components/DisplayOptions/DisplayOptions";
-import SortOptions from "./components/SortOptions/SortOptions";
+
 
 const App = () => {
   const [displayOption, setDisplayOption] = useState("By Status"); // Default display option
@@ -20,7 +20,7 @@ const App = () => {
     <div className="app">
       <h1>Kanban Board</h1>
       <DisplayOptions onDisplayChange={handleDisplayChange} />
-      {/* <SortOptions onSortChange={handleSortChange} /> */}
+
       <Board displayOption={displayOption} sortOption={sortOption} />
     </div>
   );
